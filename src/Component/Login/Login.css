@@ -1,0 +1,176 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Poiret One", sans-serif;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundAnimation 15s infinite alternate;
+  }
+  
+  /* Background animation */
+  @keyframes backgroundAnimation {
+    0% { background-position: center top; }
+    50% { background-position: center center; }
+    100% { background-position: center bottom; }
+  }
+  
+  /* --------- Form ----------- */
+  
+  #form-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url(../../assets/2a88ef38beb248bf974a4701c7c12575.webp);
+
+  }
+  
+  /* ----- Form content ------ */
+  
+  .title {
+    font-weight: 800;
+    font-size: 30pt;
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+  }
+  
+  .msg {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  input {
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    width: 100%;
+    border-bottom: solid 2px #fff;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    bottom: 10px;
+  }
+  
+  a {
+    color: rgb(190, 173, 250);
+    text-decoration: none;
+    font-weight: 800;
+  }
+  
+  .label {
+    margin-top: 10px;
+    font-weight: 600;
+    position: relative;
+    bottom: 5px;
+  }
+  
+  .submit_s, .submit {
+    margin-top: 30px;
+    color: #fff;
+    height: 40px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+    animation: buttonAnimation 1s infinite;
+  }
+  
+  /* Button animation */
+  @keyframes buttonAnimation {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  .titles {
+    margin-left: 30px;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  
+  input:focus {
+    border-bottom: 2px solid #fff;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .submit:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 24pt;
+    }
+  
+    .titles {
+      font-size: 2rem;
+    }
+  
+    #form-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    input {
+      font-size: 14px;
+    }
+  
+    .submit_s, .submit {
+      height: 35px;
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 20pt;
+    }
+  
+    .titles {
+      font-size: 1.8rem;
+    }
+  
+    #form-container {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    input {
+      font-size: 12px;
+    }
+  
+    .submit_s, .submit {
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+  

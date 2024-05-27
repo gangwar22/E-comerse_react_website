@@ -1,0 +1,205 @@
+.Product {
+    padding: 20px;
+    background-color: white;
+}
+
+.img {
+    width: 100%;
+}
+
+.img img {
+    width: 100%;
+    height: 70%;
+}
+
+.products {
+    position: relative;
+    top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+    max-width: 1700px;
+    max-height: 9700px;
+    margin: 0 auto;
+}
+
+.card {
+    max-width: 350px;
+    max-height: 4570px;
+    min-height: 400px; /* Ensure minimum height of 400px */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.image {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 115%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.info {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.info h1 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.info p, .info h4, .info h5 {
+    margin: 5px 0;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0056b3;
+    height: 40px;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.btn button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.btn button:hover {
+    background-color: #004494;
+}
+
+@media screen and (max-width: 1200px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        max-width: 100%;
+    }
+}
+
+
+/* Home.css */
+.card {
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+
+
+  .image-scroller {
+    width: 120%;
+}
+
+.image-container {
+    width: 200%;
+}
+
+
+.image-scroller {
+    width: 100%;
+    position: relative; 
+}
+
+.image-container {
+    width: 100%;
+}
+
+/* Background animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.image-scroller::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(270deg, #ff6600, #00ffcc, #ff6666, #6600cc, #6600cc, #66cc00, #cc6600);
+    background-size: 200% 200%; 
+    animation: backgroundAnimation 10s infinite; 
+}
+
+
+
+.three:hover::before {
+    box-shadow: 0 0 10px 2px var(--colr-pri);
+    transform: scale(1.2, 1.4);
+}
+
+
+
